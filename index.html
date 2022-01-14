@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volver</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="transport_wrapper">
+        <div class="transport">
+          <button id="startButton" class="transBtn" type="button" name="button">START</button>
+          <button id="stopButton" class="transBtn" type="button" name="button">STOP</button>
+        </div>
+      </div>
+      <div class="plate_wrapper">
+        <div class="plate">
+          <div class="plug_face">
+
+            <div class="top_container">
+              <div class="knob">
+                <webaudio-knob src="./images/silver1.png" id="wetDry" class="knob" sensitivity="0.1" enable="1" diameter="110" sprites="100" value="0.2" min="0" max="1" step="0.01" ></webaudio-knob>
+              </div>
+              <div class="knob">
+                <webaudio-knob src="./images/silver1.png" id="masterVol" class="knob" sensitivity="0.1" enable="1" diameter="110" sprites="100" value="0.2" min="0" max="0.8" step="0.01" ></webaudio-knob>
+              </div>
+            </div>
+
+            <div class="middle_container flexible column start middle">
+              <div class="row flexible middle center">
+                <div class="knob">
+                  <webaudio-knob src="./images/silver2.png" id="decayTime"  class="knob" sensitivity="0.1" enable="1" diameter="160" sprites="100" min="0.1" max="10" step="0.01" value="1" ></webaudio-knob>
+                </div>
+                  <!-- <webaudio-param link="decayTime" width="80"></webaudio-param> -->
+              </div>
+              <!-- <script>
+                function valueconv(x){
+                  x = 20 * Math.pow( 1000, x / 100 );
+                  if(x <= 1000) return x.toFixed(2) + " Hz";
+                  return (x/1000).toFixed(2) + " kHz";
+                }
+              </script> -->
+              <div class="row flexible middle center">
+                <div class="knob">
+                  <webaudio-knob src="./images/silver3.png" id="fadeInTime"  class="knob" sensitivity="0.1" enable="1" diameter="160" sprites="100" min="0.01" max="1" step="0.001" value="0.1" ></webaudio-knob>
+                </div>
+                <!-- <webaudio-param link="fadeInTime" width="80"></webaudio-param> -->
+              </div>
+            </div>
+
+            <div class="bottom_container flexible column center middle">
+              <div class="slider">
+                <webaudio-slider id="lpFreqStart" sensitivity="0.3" enable="1" src="./images/slider_ditch.png" knobsrc="./images/slider_knob.png" min="0" max="20000" step="100" value="15000" sprites="100" width="200" height="32" ditchlength="150" direction="vert" style="overflow: hidden"></webaudio-slider>
+              </div>
+              <div class="slider">
+                <webaudio-slider id="lpFreqEnd" sensitivity="0.3" enable="1" src="./images/slider_ditch.png" knobsrc="./images/slider_knob.png" min="0" max="20000" step="100" value="1000" sprites="100" width="200" height="32" ditchlength="150" direction="vert" style="overflow: hidden"></webaudio-slider>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="meter_container">
+      <webaudio-knob src="./images/yelloVU.png" id="meterVU" class="meter_vu" sensitivity="1" enable="1" width="250" height="130" sprites="50" value="-30" min="-20" max="18" step="0.01" ></webaudio-knob>
+    </div>
+    <div class="control">
+      <webaudio-knob src="./images/big_ridge_256.png" id="masterVol" class="knob" sensitivity="0.1" enable="1" diameter="110" sprites="100" value="0.2" min="0" max="0.8" step="0.01" valuetip="1"></webaudio-knob>
+    </div>
+    <div class="button">
+      <webaudio-switch id="od1" src="./images/button.png" type="radio" name="overdrive1" group="overdriveSelect" class="overdrive_select" width="55" height="55" value="1"> </webaudio-switch>
+    </div> -->
+    <script type="module" src="/tuna-min.js"></script>
+    <script type="module" src="/cb_webaudio-controls.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

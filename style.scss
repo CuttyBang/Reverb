@@ -1,0 +1,100 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+
+.app {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.transport_wrapper {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  .transport {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .transBtn {
+      width: 90px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+    }
+    #startButton {
+      background: #0ac940;
+      color: #fff;
+    }
+    #stopButton {
+      background: #da2f2f;
+      color: #fff;
+    }
+  }
+}
+
+.plate_wrapper > * {
+  transform: scale(0.9);
+}
+
+.plate_wrapper {
+  width: 254px;
+  height: 870px;
+  margin: 0 auto;
+  .plate {
+    width: 254px;
+    height: 870px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/sky_plate2.png");
+  }
+}
+
+.plug_face {
+  width: 87%;
+  height: 78%;
+  margin-right: 3px;
+  .top_container {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle_container {
+    height: 50%;
+  }
+  .bottom_container {
+    width: 100%;
+    height: 30%;
+    // margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.slider:first-of-type {
+  margin: 0 0 20px;
+}
+
+.slider:last-of-type {
+  margin: 10px 0 10px;
+}
